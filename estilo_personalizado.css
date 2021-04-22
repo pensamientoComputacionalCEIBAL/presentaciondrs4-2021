@@ -1,6 +1,10 @@
+input 
+{
+font-size: 12px!important;
+}
+
 body {
 font-family: 'Amiko', sans-serif;
-font-size: 14px!important;
 background-image: url(imagen_fondo.png);
 background-repeat: no-repeat;
 background-attachment: fixed;
