@@ -1,6 +1,7 @@
 console.log("Hola");
 
-document.getElementById('element_2').onchange = function() {myFunction()};
+document.getElementById("element_2").onchange = function() {myFunction()};
+
 function myFunction() {
-alert("Hola mundo");
-};
+  alert("jeje");
+}
