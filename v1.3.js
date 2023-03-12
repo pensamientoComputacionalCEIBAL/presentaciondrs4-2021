@@ -25,7 +25,11 @@ $('#element_2').change(function(){
     case "Tatiana Gilles": $("#element_3").val('tgilles@ceibal.edu.uy'); break;
     case "Veda Contreras": $("#element_3").val('vcontreras@ceibal.edu.uy'); break;
     case "Yenniffer de los Santos": $("#element_3").val('ydelossantos@ceibal.edu.uy'); break; }
+});
 
-})
+$("#submit_secondary" ).click(function() {
+  $('input[type="text"]').val('');
+  $('textarea').val('');
+});
 
 });
