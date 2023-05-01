@@ -20,6 +20,7 @@ $('#element_2').change(function(){
     case "Lourdes Vidal": $("#element_3").val('lvidal@ceibal.edu.uy'); break;
     case "Magela Araujo": $("#element_3").val('magaraujo@ceibal.edu.uy'); break;
     case "Mónica González": $("#element_3").val('mogonzalez@ceibal.edu.uy'); break;
+    case "Noelia De Cuadro Pereira": $("#element_3").val('ndecuadro@ceibal.edu.uy'); break;  
     case "Romina Etchepare": $("#element_3").val('roetchepare@ceibal.edu.uy'); break;
     case "Santiago Olivera": $("#element_3").val('solivera@ceibal.edu.uy'); break;
     case "Silvana Salvador": $("#element_3").val('ssalvador@ceibal.edu.uy'); break;
