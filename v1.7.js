@@ -5,6 +5,7 @@ $(document).ready(function(){
 $('#element_2').change(function(){ 
   switch($("#element_2 :selected").text()) {
     case "Fernando Sabaño": $("#element_3").val('saba.fernando.daniel@gmail.com'); break;
+    case "Agustin Romano": $("#element_3").val('aromano@ceibal.edu.uy'); break;  
     case "Bruno Oliva": $("#element_3").val('broliva@ceibal.edu.uy'); break;  
     case "Carolina Larronda": $("#element_3").val('clarronda@ceibal.edu.uy'); break;
     case "Carolina Romero": $("#element_3").val('cromero@ceibal.edu.uy'); break;
