@@ -50,17 +50,28 @@ ms2 = Date.parse(fecha_llegadaTexto);
 fechaPartida = new Date(ms);
 fechaLlegada = new Date(ms2);
 dif_Minutos = (fechaLlegada.getTime() - fechaPartida.getTime() ) /  1000 / 60;
+  
 if (dif_Minutos > 0) {
 cantidadDias = Math.trunc(dif_Minutos  / 1440);
 mensaje = "";
-if (cantidadDias == 0) { 
-  cantidadMinutosSinHorasTrabajadas = dif_Minutos - 480;
-  cantidadDeCiclos24 = 0;
-  mensaje = "NO corresponde ciclo de 24 horas\n";
- }
+  
+if (cantidadDias == 0) {
+  if ( $("#element_37_1").is(":checked") == false) {
+    cantidadMinutosSinHorasTrabajadas = dif_Minutos - 480;
+    cantidadDeCiclos24 = 0;
+    mensaje = "NO corresponde ciclo de 24 horas\n"; }
+  else {
+    cantidadMinutosSinHorasTrabajadas = dif_Minutos;
+    cantidadDeCiclos24 = 1; } 
+}
 else {
-  cantidadMinutosSinHorasTrabajadas = dif_Minutos - (480 * cantidadDias);
+  if ( $("#element_37_1").is(":checked") == false) {
+    cantidadMinutosSinHorasTrabajadas = dif_Minutos - (480 * cantidadDias); }
+  else { cantidadMinutosSinHorasTrabajadas = dif_Minutos; }
   cantidadDeCiclos24 =  Math.trunc( cantidadMinutosSinHorasTrabajadas / 1440);
+  
+  if ( $("#element_37_1").is(":checked") == true && cantidadDeCiclos24 == 0 ) { cantidadDeCiclos24 = 1; }
+  
   if (cantidadDeCiclos24 == 0) { mensaje = "No corresponde ciclo de 24 horas\n"; }
   else { mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n"; }
 }
