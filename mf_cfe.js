@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
-let dir = "", refe = ""; $('#element_24').hide();
+let dir = "", refe = ""; 
+$('#element_24').hide();
+$('#element_24').css("padding", "8px");
+$('#element_24').css("font-size", "14px");
 
 function escribir () {
 if (dir != "") {
