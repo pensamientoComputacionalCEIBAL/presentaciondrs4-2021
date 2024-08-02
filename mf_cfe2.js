@@ -32,7 +32,7 @@ switch($(".anaPelea :selected").text()) {
     refe = 'Silvana Salvador (ssalvador@ceibal.edu.uy)';
     break;
   case "Salto":
-    dir = 'cuando la sede sea confirmada, te notificaremos vía email';
+    dir = 'CERP Salto, Florencio Sanchez 398 - departamento de Salto';
     refe = 'Diego Texeira (dtexeira@ceibal.edu.uy)';
     break;
   case "Paysandú":
