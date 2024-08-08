@@ -65,6 +65,8 @@ $("#element_10_2").val() != '') {
     limite_laboral.setHours(17);
     limite_laboral.setMinutes(0);
     limite_laboral.setDate(limite_laboral.getDate() + cantidadDeCiclos24);
+
+    if ( limite_laboral > fechaLlegada ) { limite_laboral.setDate(limite_laboral.getDate() - 1); }
     
     cantidadDeHorasSinCiclo24 = Math.trunc ( (fechaLlegada -  limite_laboral) / 1000 / 60 / 60);
 
