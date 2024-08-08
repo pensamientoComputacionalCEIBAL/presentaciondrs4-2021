@@ -1,4 +1,4 @@
-console.log("Script funcionando correctamente :) 12");
+console.log("Script funcionando correctamente :) 123");
 
 $(document).ready(function(){
 
@@ -61,7 +61,7 @@ $("#element_10_2").val() != '') {
     if (cantidadDeCiclos24 == 0) { mensaje = "No corresponde ciclo de 24 horas\n"; }
     else { mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n"; }
 
-    limite_laboral = fechaLlegada;
+    limite_laboral = new Date(fechaLlegada);
     limite_laboral.setHours(17);
     limite_laboral.setMinutes(0);
 
