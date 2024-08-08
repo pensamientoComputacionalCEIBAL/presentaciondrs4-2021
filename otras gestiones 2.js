@@ -1,4 +1,4 @@
-console.log("Script funcionando correctamente :)");
+console.log("Script funcionando correctamente :) 1");
 
 $(document).ready(function(){
 
@@ -41,7 +41,7 @@ $("#element_10_2").val() != '') {
   let fechaPartida = new Date(ms);
   let fechaLlegada = new Date(ms2);
   let dif_Minutos = (fechaLlegada.getTime() - fechaPartida.getTime() ) /  1000 / 60;
-  let limite_laboral = new Date("May 26, 1993 17:00:00");
+  let limite_laboral = null;
   let mensaje = "";
   
   if (dif_Minutos > 0) {
@@ -61,8 +61,12 @@ $("#element_10_2").val() != '') {
     if (cantidadDeCiclos24 == 0) { mensaje = "No corresponde ciclo de 24 horas\n"; }
     else { mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n"; }
 
-    let hora_llegada = new Date("May 26, 1993 " + $("#element_10_1").val() + ":" + $("#element_10_2").val() + " GMT-0300");
-    cantidadDeHorasSinCiclo24 = Math.trunc ( (hora_llegada -  limite_laboral) / 1000 / 60 / 60);
+    limite_laboral = fechaPartida;
+    limite_laboral.setHours(17);
+    limite_laboral.setMinutes(0);
+    limite_laboral.setDate(limite_laboral.getDate() + cantidadDeCiclos24);
+    
+    cantidadDeHorasSinCiclo24 = Math.trunc ( (fechaLlegada -  limite_laboral) / 1000 / 60 / 60);
 
     if (cantidadDeHorasSinCiclo24 > 6) { mensaje += "Corresponde también: 'Viaje: +6 hs'"; }
     else if (cantidadDeHorasSinCiclo24 > 2 && cantidadDeHorasSinCiclo24 <= 6 ) { mensaje += "Corresponde también: 'Viaje: 2-6 hs'"; }
