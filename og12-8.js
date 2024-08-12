@@ -1,4 +1,4 @@
-console.log("Script funcionando correctamente :) 123");
+console.log("Script funcionando correctamente :) Versión 12/08/2024 11:46 A.M");
 
 $(document).ready(function(){
 
