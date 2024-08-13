@@ -1,4 +1,4 @@
-console.log("Script funcionando correctamente :) Versión 13/08/2024 17:03 A.M");
+console.log("Script funcionando correctamente :) Versión 13/08/2024 17:19 A.M");
 
 $(document).ready(function(){
 
@@ -106,7 +106,7 @@ $("#element_10_2").val() != '') {
     cantidadDeHorasSinCiclo24 = Math.trunc ( (fechaLlegada -  limite_laboral) / 1000 / 60 / 60) + 
     Math.trunc ( (limite_laboral_inicio -  fechaPartida) / 1000 / 60 / 60);
 
-    if (cantidadDeHorasSinCiclo24 > 6) { mensaje += "Corresponde también: 'Viaje: +6 hs'"; }
+    if (cantidadDeHorasSinCiclo24 >= 6) { mensaje += "Corresponde también: 'Viaje: +6 hs'"; }
     else if (cantidadDeHorasSinCiclo24 > 2 && cantidadDeHorasSinCiclo24 <= 6 ) { mensaje += "Corresponde también: 'Viaje: 2-6 hs'"; }
     else if (cantidadDeHorasSinCiclo24 > 1 && cantidadDeHorasSinCiclo24 <= 2 ) { mensaje += "Corresponde también: 'Viaje: 1-2 hs'"; }
     else if (cantidadDeHorasSinCiclo24 > 0 ) { mensaje += "Corresponde también: 'Viaje: 1 h'"; }
