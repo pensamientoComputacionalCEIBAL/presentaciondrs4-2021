@@ -103,12 +103,13 @@ $("#element_10_2").val() != '') {
 
     if ( limite_laboral_inicio < fechaPartida ) { limite_laboral_inicio.setDate(limite_laboral_inicio.getDate() + 1); }
 
-    cantidadDeHorasSinCiclo24 = Math.trunc ( (fechaLlegada -  limite_laboral) / 1000 / 60 / 60) + 
-    Math.trunc ( (limite_laboral_inicio -  fechaPartida) / 1000 / 60 / 60);
+    cantidadDeHorasSinCiclo24 = 
+    ((fechaLlegada -  limite_laboral) / 1000 / 60 / 60) + 
+    ((limite_laboral_inicio -  fechaPartida) / 1000 / 60 / 60);
 
     if (cantidadDeHorasSinCiclo24 >= 6) { mensaje += "Corresponde también: 'Viaje: +6 hs'"; }
-    else if (cantidadDeHorasSinCiclo24 > 2 && cantidadDeHorasSinCiclo24 <= 6 ) { mensaje += "Corresponde también: 'Viaje: 2-6 hs'"; }
-    else if (cantidadDeHorasSinCiclo24 > 1 && cantidadDeHorasSinCiclo24 <= 2 ) { mensaje += "Corresponde también: 'Viaje: 1-2 hs'"; }
+    else if (cantidadDeHorasSinCiclo24 >= 2 && cantidadDeHorasSinCiclo24 <= 6 ) { mensaje += "Corresponde también: 'Viaje: 2-6 hs'"; }
+    else if (cantidadDeHorasSinCiclo24 >= 1 && cantidadDeHorasSinCiclo24 <= 2 ) { mensaje += "Corresponde también: 'Viaje: 1-2 hs'"; }
     else if (cantidadDeHorasSinCiclo24 > 0 ) { mensaje += "Corresponde también: 'Viaje: 1 h'"; }
   } else { mensaje = "Error de ingreso, no corresponde el cálculo."; }
 
