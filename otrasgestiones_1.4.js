@@ -1,4 +1,4 @@
-console.log("Script funcionando correctamente :) 456");
+console.log("Script funcionando correctamente :) para testing XD");
 
 $(document).ready(function(){
 
