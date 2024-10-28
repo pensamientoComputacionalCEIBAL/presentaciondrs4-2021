@@ -103,6 +103,20 @@ $("#element_10_2").val() != '') {
       mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n";
     }
 
+    fecha_limite_desde = new Date(fechaPartida);
+    fecha_limite_desde.setDate(fecha_limite_desde .getDate() - 1);
+    fecha_limite_desde.setHours(17);
+    fecha_limite_desde.setMinutes(0);
+
+    fecha_limite = new Date(fechaPartida);
+    fecha_limite.setHours(5);
+    fecha_limite.setMinutes(0);
+
+    if (fechaPartida > fecha_limite_desde && fechaPartida < fecha_limite) { 
+      cantidadDeCiclos24  = cantidadDeCiclos24  + 1;
+      mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n";
+    }
+
     if (cantidadDeHorasSinCiclo24 >= 6) { mensaje += "Corresponde también: 'Viaje: +6 hs'"; }
     else if (cantidadDeHorasSinCiclo24 >= 2 && cantidadDeHorasSinCiclo24 < 6 ) { mensaje += "Corresponde también: 'Viaje: 2-6 hs'"; }
     else if (cantidadDeHorasSinCiclo24 >= 1 && cantidadDeHorasSinCiclo24 < 2 ) { mensaje += "Corresponde también: 'Viaje: 1-2 hs'"; }
