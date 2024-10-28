@@ -104,7 +104,7 @@ $("#element_10_2").val() != '') {
     }
 
     fecha_limite_desde = new Date(fechaPartida);
-    fecha_limite_desde.setDate(fecha_limite_desde .getDate() - 1);
+    fecha_limite_desde.setDate(fecha_limite_desde.getDate() - 1);
     fecha_limite_desde.setHours(17);
     fecha_limite_desde.setMinutes(0);
 
