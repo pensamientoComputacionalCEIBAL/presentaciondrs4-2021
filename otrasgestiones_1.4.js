@@ -112,7 +112,7 @@ $("#element_10_2").val() != '') {
     fecha_limite.setHours(5);
     fecha_limite.setMinutes(0);
 
-    if (fechaPartida > fecha_limite_desde && fechaPartida < fecha_limite && cantidadDeCiclos24 > 1) { 
+    if (fechaPartida > fecha_limite_desde && fechaPartida < fecha_limite) { 
       cantidadDeCiclos24  = cantidadDeCiclos24  + 1; 
       mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n"; }
 
