@@ -102,17 +102,10 @@ $("#element_10_2").val() != '') {
         cantidadDeHorasSinCiclo24 = ((fechaLlegada -  limite_laboral) / 1000 / 60 / 60);
         mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n";
     }
-
-    fecha_limite_desde = new Date(fechaPartida);
-    fecha_limite_desde.setDate(fecha_limite_desde.getDate() - 1);
-    fecha_limite_desde.setHours(17);
-    fecha_limite_desde.setMinutes(0);
-        
-    fecha_limite = new Date(fechaPartida);
-    fecha_limite.setHours(5);
-    fecha_limite.setMinutes(0);
-
-    if (fechaPartida > fecha_limite_desde && fechaPartida < fecha_limite) { 
+    
+    temp2 = ( (dif_Minutos / 1440) - temp ).toFixed(2);
+    
+    if (temp2 >= 0.33) { 
       cantidadDeCiclos24  = cantidadDeCiclos24  + 1; 
       mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n"; }
 
