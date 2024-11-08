@@ -92,20 +92,20 @@ $("#element_10_2").val() != '') {
     let temp = Math.trunc( dif_Minutos / 1440);
 
     if ( $("#element_37_1").is(":checked") == false) {
-      cantidadDeCiclos24 = 0;
+      // cantidadDeCiclos24 = 0;
       cantidadDeHorasSinCiclo24 = ((fechaLlegada -  limite_laboral) / 1000 / 60 / 60) +
       ((limite_laboral_inicio -  fechaPartida) / 1000 / 60 / 60);
-      mensaje = "No corresponde ciclo de 24 horas\n";
+      // mensaje = "No corresponde ciclo de 24 horas\n";
     }
     else {
-      if (temp > 0) { cantidadDeCiclos24 = temp; } else { cantidadDeCiclos24 = 1; }
+      if (temp >= 0) { cantidadDeCiclos24 = temp; } else { cantidadDeCiclos24 = 1; }
         cantidadDeHorasSinCiclo24 = ((fechaLlegada -  limite_laboral) / 1000 / 60 / 60);
         mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n";
     }
     
     temp2 = ( (dif_Minutos / 1440) - temp ).toFixed(2);
     
-    if (temp2 >= 0.33) { 
+    if (temp2 >= 0.60) { 
       cantidadDeCiclos24  = cantidadDeCiclos24  + 1; 
       mensaje = "Corresponde " + cantidadDeCiclos24 + " ciclo/s de 24 horas.\n"; }
 
