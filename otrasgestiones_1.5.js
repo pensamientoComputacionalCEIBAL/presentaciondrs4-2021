@@ -90,6 +90,7 @@ $("#element_10_2").val() != '') {
     if ( limite_laboral_inicio < fechaPartida ) { limite_laboral_inicio.setDate(limite_laboral_inicio.getDate() + 1); }
 
     let temp = Math.trunc( dif_Minutos / 1440);
+    cantidadDeCiclos24 = 0;
 
     if ( $("#element_37_1").is(":checked") == false) {
       // cantidadDeCiclos24 = 0;
